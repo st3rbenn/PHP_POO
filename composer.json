@@ -1,0 +1,16 @@
+{
+    "name": "composer/autoload",
+    "author": [{
+        "name": "Anthonin",
+        "email": "anthonincolas37000@gmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "app\\class": "app/Class",
+            "app\\Components": "app/Components",
+            "app\\Repository": "app/Repository"
+        }
+    },
+    "require": {}
+}

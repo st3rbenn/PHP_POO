@@ -9,19 +9,16 @@ class DbConnect
         if (!isset(static::$connection)) {
             try {
                 static::$connection = new PDO(
-                    'mysql:host=localhost:8889;dbname=mmorpg;charset=utf8',
+                    'mysql:host=localhost;dbname=mmorpg;charset=utf8',
                     'root',
-                    'root',
+                    '30122001',
                     [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
                 );
             }catch(Exception $exception){
-                echo 'Une erreur est survenue lors de la connexion a la BDD';
+                echo 'Une erreur est survenue lors de la connexion a la BDD' . $exception;
                 die;
             }
         }
         return static::$connection;
     }
-
-
-
 }
